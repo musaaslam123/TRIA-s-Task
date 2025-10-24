@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import AddContactForm from "./components/AddContactForm";
-import ContactList from "./components/contactList";
+import ContactList from "./components/ContactList";
 import SearchBar from "./components/SearchBar";
 import contactsData from "./data/contacts.js";
 import DeletedContacts from "./components/DeletedContacts.jsx";
