@@ -1,4 +1,4 @@
-import ContactCard from "./ContactCard";
+import ContactCard from "./ContactCard.jsx";
 
 export default function ContactList({ contacts, onDelete, onUpdate }) {
   if (contacts.length === 0) {
