@@ -94,5 +94,4 @@ See `package.json` for exact versions.
 - No license specified in this repository by default. Add a `LICENSE` file if you intend to open-source the project.
 
 # Created By- Mohammad Musa
----
 

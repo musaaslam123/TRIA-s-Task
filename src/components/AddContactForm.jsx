@@ -79,7 +79,7 @@ function AddContactForm({ onAdd }) {
 
       <div className="grid gap-3">
         {/* Full Name */}
-        <div className="flex items-center border border-gray-400 dark:border-gray-500 rounded-lg bg-white dark:bg-transparent focus-within:ring-2 focus-within:ring-blue-400 hover:border-blue-400 transition-colors duration-300">
+        <div className="flex items-center border border-gray-400 dark:border-gray-500 rounded-lg bg-white dark:bg-transparent focus-within:ring-2 focus-within:ring-blue-400 hover:border-blue-400 transition-colors duration-300 min-w-0">
           <span className="pl-3 pr-2 text-blue-400 text-lg">👤</span>
           <input
             type="text"
@@ -87,12 +87,12 @@ function AddContactForm({ onAdd }) {
             placeholder="Full Name"
             value={form.name}
             onChange={handleChange}
-            className="flex-1 bg-transparent text-gray-800 dark:text-white p-2 rounded-r-lg focus:outline-none placeholder-gray-500 dark:placeholder-gray-400 transition-colors duration-300"
+            className="flex-1 min-w-0 bg-transparent text-gray-800 dark:text-white p-2 rounded-r-lg focus:outline-none placeholder-gray-500 dark:placeholder-gray-400 transition-colors duration-300 w-full max-w-full box-border"
           />
         </div>
 
         {/* Email */}
-        <div className="flex items-center border border-gray-400 dark:border-gray-500 rounded-lg bg-white dark:bg-transparent focus-within:ring-2 focus-within:ring-blue-400 hover:border-blue-400 transition-colors duration-300">
+        <div className="flex items-center border border-gray-400 dark:border-gray-500 rounded-lg bg-white dark:bg-transparent focus-within:ring-2 focus-within:ring-blue-400 hover:border-blue-400 transition-colors duration-300 min-w-0">
           <span className="pl-3 pr-2 text-blue-400 text-lg">✉︎</span>
           <input
             type="email"
@@ -100,14 +100,14 @@ function AddContactForm({ onAdd }) {
             placeholder="Email Address"
             value={form.email}
             onChange={handleChange}
-            className="flex-1 bg-transparent text-gray-800 dark:text-white p-2 rounded-r-lg focus:outline-none placeholder-gray-500 dark:placeholder-gray-400 transition-colors duration-300"
+            className="flex-1 min-w-0 bg-transparent text-gray-800 dark:text-white p-2 rounded-r-lg focus:outline-none placeholder-gray-500 dark:placeholder-gray-400 transition-colors duration-300 w-full max-w-full box-border"
           />
         </div>
 
         {/* Country Code + Phone */}
         <div className="flex gap-2 items-center w-full">
           {/* Country Code Dropdown */}
-          <div className="relative w-24 sm:w-28 country-dropdown">
+          <div className="relative w-24 sm:w-28 country-dropdown shrink-0">
             <button
               type="button"
               onClick={() => setDropdownOpen(!dropdownOpen)}
@@ -166,7 +166,7 @@ function AddContactForm({ onAdd }) {
           </div>
 
           {/* Phone Input */}
-          <div className="flex items-center border border-gray-400 dark:border-gray-500 rounded-lg flex-1 bg-white dark:bg-transparent focus-within:ring-2 focus-within:ring-blue-400 hover:border-blue-400 transition-colors duration-300">
+          <div className="flex items-center border border-gray-400 dark:border-gray-500 rounded-lg flex-1 bg-white dark:bg-transparent focus-within:ring-2 focus-within:ring-blue-400 hover:border-blue-400 transition-colors duration-300 min-w-0">
             <span className="pl-3 pr-2 text-blue-400 text-lg">📞</span>
             <input
               type="text"
@@ -175,7 +175,7 @@ function AddContactForm({ onAdd }) {
               value={form.phone}
               onChange={handleChange}
               inputMode="numeric"
-              className="flex-1 bg-transparent text-gray-800 dark:text-white p-2 rounded-r-lg focus:outline-none placeholder-gray-500 dark:placeholder-gray-400 transition-colors duration-300"
+              className="flex-1 min-w-0 bg-transparent text-gray-800 dark:text-white p-2 rounded-r-lg focus:outline-none placeholder-gray-500 dark:placeholder-gray-400 transition-colors duration-300 w-full max-w-full box-border"
             />
           </div>
         </div>

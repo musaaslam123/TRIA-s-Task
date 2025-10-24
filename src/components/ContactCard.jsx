@@ -20,34 +20,34 @@ function ContactCard({ contact, onDelete, onUpdate }) {
   return (
     <div
       className="bg-white dark:bg-white/10 border border-gray-300 dark:border-white/20
-      backdrop-blur-sm p-4 rounded-xl shadow-md flex items-center justify-between
-      hover:bg-gray-100 dark:hover:bg-white/20 transition"
+      backdrop-blur-sm p-4 rounded-xl shadow-md flex flex-col md:flex-row items-start md:items-center justify-between
+      hover:bg-gray-100 dark:hover:bg-white/20 transition gap-3"
     >
       {!isEditing ? (
-        <div className="flex items-center justify-between w-full">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between w-full gap-3 md:gap-0">
           {/* LEFT SIDE: Avatar + Info */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 min-w-0">
             {/* Avatar */}
-            <div className="w-12 h-12 bg-blue-500 text-white flex items-center justify-center rounded-full text-lg font-semibold shadow-sm">
+            <div className="w-12 h-12 bg-blue-500 text-white flex items-center justify-center rounded-full text-lg font-semibold shadow-sm shrink-0">
               {contact.name ? contact.name.charAt(0).toUpperCase() : "👤"}
             </div>
 
             {/* Contact Info */}
-            <div>
-              <h2 className="text-lg font-semibold text-gray-800 dark:text-white">
+            <div className="min-w-0">
+              <h2 className="text-lg font-semibold text-gray-800 dark:text-white truncate">
                 {contact.name}
               </h2>
-              <p className="text-gray-600 dark:text-gray-300 text-sm">
+              <p className="text-gray-600 dark:text-gray-300 text-sm truncate">
                 {contact.phone}
               </p>
-              <p className="text-gray-500 dark:text-gray-400 text-xs">
+              <p className="text-gray-500 dark:text-gray-400 text-xs truncate">
                 {contact.email}
               </p>
             </div>
           </div>
 
           {/* RIGHT SIDE: ACTION BUTTONS */}
-          <div className="flex gap-3">
+          <div className="flex gap-3 self-end md:self-auto">
             <button
               onClick={() => setIsEditing(true)}
               className="text-yellow-500 hover:text-yellow-600 text-xl"
